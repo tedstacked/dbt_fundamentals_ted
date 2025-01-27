@@ -42,3 +42,12 @@ models:
       +materialized: view  
     marts:
       +materialized: table
+
+name: "my_dbt_project"
+tests:
+  +enabled: True
+flags:
+  warn_error_options:
+    error:
+      - NoNodesForSelectionCriteria
+      - NothingToDo

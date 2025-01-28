@@ -13,7 +13,15 @@ with source_data as (
 
     select 1 as id
     union all
+<<<<<<< HEAD
     select 5 as id
+=======
+
+    select 4 as id
+>>>>>>> 6f06e3b309695e83b5d3f7e00c792e36988906d1
+
+
+
 
 )
 

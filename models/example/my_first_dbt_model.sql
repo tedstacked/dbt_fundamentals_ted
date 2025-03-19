@@ -16,6 +16,8 @@ with source_data as (
     select 7 as id
     union all
     select 10 as id
+    union all
+    select 100 as id
 
 )
 

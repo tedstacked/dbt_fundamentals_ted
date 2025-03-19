@@ -13,7 +13,15 @@ with source_data as (
 
     select 1 as id
     union all
-    select null as id
+    select 7 as id
+    -- union all
+    -- select 10 as id
+    -- union all
+    -- select 100 as id
+    -- union all
+    -- select 400 as id
+    -- union all
+    -- select 123 as id
 
 )
 

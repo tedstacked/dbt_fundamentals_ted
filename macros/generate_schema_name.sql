@@ -4,6 +4,10 @@
     {%- if custom_schema_name is none -%}
 
         {{ default_schema }}
+        
+    {%- elif target.name == 'ci' -%}
+
+        {{ custom_schema_name }}_{{ default_schema | trim }}
 
     {%- else -%}
 

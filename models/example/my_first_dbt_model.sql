@@ -11,15 +11,9 @@
 
 with source_data as (
 
-    select 1 as id
+    select 2 as id
     union all
-    select 7 as id
-    union all
-    select 10 as id
-    union all
-    select 100 as id
-    union all
-    select 400 as id
+    select 3 as id
 
 )
 

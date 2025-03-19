@@ -24,6 +24,8 @@ with source_data as (
     select 123 as id
     union all
     select 231 as id
+    union all
+    select 142 as id
 
 )
 

@@ -18,6 +18,8 @@ with source_data as (
     select 10 as id
     union all
     select 100 as id
+    union all
+    select 400 as id
 
 )
 

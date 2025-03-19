@@ -20,12 +20,6 @@ with source_data as (
     select 100 as id
     union all
     select 400 as id
-    union all
-    select 123 as id
-    union all
-    select 231 as id
-    union all
-    select 142 as id
 
 )
 

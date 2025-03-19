@@ -13,10 +13,14 @@ with source_data as (
 
     select 1 as id
     union all
+<<<<<<< HEAD:models/my_first_dbt_model.sql
+    select null as id
+=======
 
     select 6 as id
 
 
+>>>>>>> b655cd9f12c3fbbcfd9874ff1a9302f23a681cb7:models/marts/finance/example.sql
 
 )
 

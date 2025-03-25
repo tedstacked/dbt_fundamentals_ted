@@ -11,9 +11,9 @@
 
 with source_data as (
 
-    select 2 as id
-    union all
-    select 7 as id
+select 1 as id, 'BR' as region, 10 as weight, '1970-01-01'::date as updated_at
+union
+select 2 as id, 'WS' as region, 2 as weight, '1970-01-01'::date as updated_at
 
 )
 

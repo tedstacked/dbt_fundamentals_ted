@@ -18,6 +18,9 @@ union
 select 3 as id, 'WS' as region, 1 as weight, '1970-01-01'::date as updated_at
 union
 select 5 as id, 'WS' as region, 5 as weight, '1970-01-01'::date as updated_at
+union
+select 6 as id, 'WS' as region, 6 as weight, '1970-01-01'::date as updated_at
+
 
 )
 

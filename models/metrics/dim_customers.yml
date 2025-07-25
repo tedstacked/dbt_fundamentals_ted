@@ -61,4 +61,4 @@ saved_queries:
         config:
           export_as: table # Options available: table, view
           alias: my_export_alias # Optional - defaults to Export name
-          schema: my_export_schema_name # Optional - defaults to deployment schema
+          schema: AA_TED_SAVED_QUERY # Optional - defaults to deployment schema

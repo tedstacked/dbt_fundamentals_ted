@@ -44,21 +44,60 @@ metrics:
         name: customers
 
 saved_queries:
-  - name: order_metrics
-    label: order_metrics
-    description: Relevant order metrics
+  - name: customer_metrics
+    label: customer_metrics  
+    description: Simple customer metrics
     query_params:
       metrics:
-        - large_orders
-        - order_total
+        - customers_with_orders
       group_by:
-        - Entity('order_id')
-        # - TimeDimension('metric_time', 'day')
-        # - Dimension('customer__customer_name')
-        # - ... # Additional group_by
+        - Dimension('customer__customer_name')
+        - Dimension('customer__first_order_date') 
+        - Dimension('customer__most_recent_order_date')
+        - Entity('customer')
     exports:
-      - name: my_export
-        config:
-          export_as: table # Options available: table, view
-          alias: my_export_alias # Optional - defaults to Export name
-          schema: AA_TED_SAVED_QUERY # Optional - defaults to deployment schema
+    - name: customer_export
+      config:
+        export_as: table  # or view
+        alias: customer_metrics_table
+        schema: AA_TED_SAVED_QUERY
+      # Start with no group_by - just test the metric works
+
+# saved_queries:
+#   - name: customer_metrics
+#     label: customer_metrics
+#     description: Relevant customer metrics
+#     query_params:
+#       metrics:
+#         - customers_with_orders
+#       group_by:
+#         - customer__customer_name           # From dimensions list
+#         - customer__first_order_date        # From dimensions list  
+#         - customer__most_recent_order_date  # From dimensions list
+#         - customer                          # From entities list
+#     exports:
+#       - name: my_export
+#         config:
+#           export_as: table
+#           alias: customer_export_alias
+#           schema: AA_TED_SAVED_QUERY
+
+# saved_queries:
+#   - name: order_metrics
+#     label: order_metrics
+#     description: Relevant order metrics
+#     query_params:
+#       metrics:
+#         - large_orders
+#         - order_total
+#       group_by:
+#         - Entity('order_id')
+#         # - TimeDimension('metric_time', 'day')
+#         # - Dimension('customer__customer_name')
+#         # - ... # Additional group_by
+#     exports:
+#       - name: my_export
+#         config:
+#           export_as: table # Options available: table, view
+#           alias: my_export_alias # Optional - defaults to Export name
+#           schema: AA_TED_SAVED_QUERY # Optional - defaults to deployment schema

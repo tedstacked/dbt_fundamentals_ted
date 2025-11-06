@@ -41,4 +41,8 @@ models:
     example:
       +materialized: table
       +schema: td
-      +access: public
+      +access: private
+    samplesample:
+      config:
+        materialized: view
+        access: public

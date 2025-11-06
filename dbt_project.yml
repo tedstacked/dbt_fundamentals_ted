@@ -41,7 +41,7 @@ models:
     example:
       +materialized: table
       +schema: td
-      +access: private
+      +access: protected
     samplesample:
       config:
         materialized: view

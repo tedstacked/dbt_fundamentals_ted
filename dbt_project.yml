@@ -43,6 +43,5 @@ models:
       +schema: td
       +access: protected
     samplesample:
-      config:
-        materialized: view
-        access: public
+      +materialized: view
+      +access: public

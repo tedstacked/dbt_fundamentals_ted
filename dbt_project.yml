@@ -46,5 +46,5 @@ models:
     samplesample:
         config:
           2nd_level:
-          materialized: view
-          access: public
+            materialized: view
+            access: public

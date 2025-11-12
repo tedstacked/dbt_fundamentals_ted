@@ -39,12 +39,10 @@ models:
   my_new_project:
     # Applies to all files under models/example/
     example:
-      config:
-        materialized: table
-        schema: td
-        access: protected
+      +materialized: table
+      +schema: td
+      +access: protected
     samplesample:
-        config:
-          2nd_level:
-            materialized: view
-            access: public
+      2nd_level:
+        +materialized: view
+        +access: protected

@@ -1,0 +1,4 @@
+models:
+  - name: my_third_dbt_model.yml
+    config:
+      access: public

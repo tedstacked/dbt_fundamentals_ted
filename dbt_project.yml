@@ -44,7 +44,7 @@ models:
         schema: td
         access: protected
     samplesample:
-      2nd_level:
         config:
-          materialized: view
-          access: public
+          2nd_level:
+            materialized: view
+            access: public

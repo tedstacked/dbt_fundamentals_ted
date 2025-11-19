@@ -1,4 +1,34 @@
+version: 2
+
 models:
   - name: my_third_dbt_model
-    config:
-      access: public
+    description: "Test model for versioned cross-project references"
+    access: public
+    latest_version: 1  # ← Changed from 1 to 2
+    
+    versions:
+      - v: 1
+        defined_in: my_third_dbt_model  # ← Uses original .sql file
+        config:
+          alias: my_third_dbt_model_v1  # ← v1 gets its own table name
+        columns:
+          - name: id
+            description: "Test ID column"
+            tests:  # ← Tests for v1
+              - unique
+              - not_null
+      
+      # - v: 2
+      #   defined_in: my_third_dbt_model_v2  # ← Points to new _v2.sql file
+      #   config:
+      #     alias: my_third_dbt_model  # ← v2 uses the main table name
+      #   columns:
+      #     - name: id
+      #       description: "Test ID column"
+      #       tests:  # ← Tests for v2
+      #         - unique
+      #         - not_null
+      #     - name: version_label
+      #       description: "Label indicating this is v2"
+      #     - name: id_times_ten
+      #       description: "ID multiplied by 10"

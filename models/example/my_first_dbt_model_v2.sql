@@ -17,5 +17,5 @@ with source_data as (
 
 select 
     id,
-    'v2' as version_label,  -- v2 adds a new column
-    id * 10 as id_times_ten  -- v2 adds another column
+    'v2' as version_label
+from source_data

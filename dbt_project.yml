@@ -41,7 +41,7 @@ models:
     example:
       +materialized: table
       +schema: td
-      +access: protected
+      +access: public
     samplesample:
       2nd_level:
         +materialized: view

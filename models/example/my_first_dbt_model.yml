@@ -14,6 +14,9 @@ models:
         columns:
           - name: id
             description: "Test ID column"
+            tests:  # ← Tests for v1
+              - unique
+              - not_null
       
       - v: 2
         defined_in: my_first_dbt_model_v2  # ← Points to new _v2.sql file
@@ -22,6 +25,9 @@ models:
         columns:
           - name: id
             description: "Test ID column"
+            tests:  # ← Tests for v2
+              - unique
+              - not_null
           - name: version_label
             description: "Label indicating this is v2"
           - name: id_times_ten

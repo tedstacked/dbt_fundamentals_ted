@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: my_first_dbt_model
+    description: "Test model for versioned cross-project references"
+    access: public
+    latest_version: 1
+    
+    versions:
+      - v: 1
+        config:
+          alias: my_first_dbt_model
+        columns:
+          - name: id
+            description: "Test ID column"

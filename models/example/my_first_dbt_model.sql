@@ -10,15 +10,14 @@
 {{ config(materialized='table') }}
 
 with source_data as (
-    select 1 as id, 'Alice' as name
+
+    select 1 as id
     union all
-    select 7 as id, 'Bob' as name
+    select 7 as id
+
 )
 
-select 
-    id,
-    name,
-    {{ add_prefix('name') }} as prefixed_name
+select *
 from source_data
 
 /*

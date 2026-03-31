@@ -13,6 +13,8 @@ with source_data as (
     select 1 as id, 'Alice' as name
     union all
     select 7 as id, 'Bob' as name
+    union all
+    select null as id,
 )
 
 select 

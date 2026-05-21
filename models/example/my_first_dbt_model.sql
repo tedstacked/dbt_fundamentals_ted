@@ -14,7 +14,7 @@ with source_data as (
     union all
     select 7 as id, 'Bob' as name
     union all
-    select 2 as id
+    select 2 as id, 'Teddy' as name
 )
 
 /*

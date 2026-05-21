@@ -1,4 +1,3 @@
-
 /*
     Welcome to your first dbt model!
     Did you know that you can also configure models directly within SQL files?
@@ -10,11 +9,17 @@
 {{ config(materialized='table') }}
 
 with source_data as (
-    select 1 as id, 'Alice' as name
+    select
+        1 as id,
+        'Alice' as name
     union all
-    select 7 as id, 'Bob' as name
+    select
+        7 as id,
+        'Bob' as name
     union all
-    select 2 as id, 'Teddy' as name
+    select
+        2 as id,
+        'Teddy' as name
 )
 
 select * from source_data

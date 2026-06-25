@@ -6,10 +6,8 @@
 -- This model depends on my_first_dbt_model via ref()
 -- AND uses the same macro
 
-select 
+select
     id,
-    name,
-    prefixed_name,
-    {{ add_prefix('name') }} as prefixed_name_again
+    name
 from {{ ref('my_first_dbt_model') }}
 where id = 1
